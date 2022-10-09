@@ -1,24 +1,53 @@
 import logo from './logo.svg';
 import './App.css';
+import {  Container, Options, Card, BigCard, Title, LineAnswers } from "./appStyle";
+import dispositivos from "./public/icons/dispositivos.svg";
+import casinha from "./public/icons/casinha.svg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Options>
+        <div className="two-cards">
+          <Card>
+            <img src={dispositivos} alt="icon"/>
+            <h2>Dispositivos</h2>
+          </Card>
+          <Card>
+            <img src={casinha} alt="icon"/>
+            <h2>House</h2>
+          </Card>
+        </div>
+        <BigCard>
+          <Title>Notificações</Title>
+
+          <div className='null'>
+          
+          </div>
+        </BigCard>
+        <BigCard>
+          <Title>Respostas rapidas</Title>
+          <div className='respostas'>
+            <LineAnswers>
+              <h3>“Já vou”</h3>
+              <button>Enviar</button>
+            </LineAnswers>
+            <LineAnswers>
+              <h3>“Um minuto”</h3>
+              <button>Enviar</button>
+            </LineAnswers>
+            <LineAnswers>
+              <h3>“Não estou em casa”</h3>
+              <button>Enviar</button>
+            </LineAnswers>
+          </div>
+        </BigCard>
+        <BigCard>
+          <Title>Sobre o App</Title>
+        </BigCard>
+
+      </Options>
+    </Container>
   );
 }
 

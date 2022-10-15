@@ -3,6 +3,15 @@ import './App.css';
 import {  Container, Options, Card, BigCard, Title, LineAnswers } from "./appStyle";
 import dispositivos from "./public/icons/dispositivos.svg";
 import casinha from "./public/icons/casinha.svg";
+import api from './services/api';
+
+var value;
+async function charge (){
+  value = await api.get();
+  console.log(value.data.value);
+}
+
+charge();
 
 function App() {
   return (

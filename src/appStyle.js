@@ -74,7 +74,7 @@ export const BigCard = styled.div`
     }
 
     div.null{
-        height: 100px;
+        height: 150px;
         overflow-y: auto;
     }
 `;
@@ -97,6 +97,10 @@ export const LineAnswers = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    border: 1px solid transparent;
+    border-radius: 0px 15px 15px 0px;
+    transition: opacity 0.4s; 
+
 
     button{
         background: #35ED88;
@@ -118,7 +122,10 @@ export const LineAnswers = styled.div`
 
         transition: opacity 0.4s;  
         :hover{
-            opacity: 0.2;
+            background: #1FBA65;
         } 
     }
+    :hover{
+        background:  rgba(183, 183, 183, 0.46);
+    } 
 `;
